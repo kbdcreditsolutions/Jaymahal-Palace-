@@ -1,0 +1,16 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'>
+<defs>
+<linearGradient id='bg' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#14121c'/><stop offset='1' stop-color='#241f33'/></linearGradient>
+<radialGradient id='glow' cx='0.5' cy='0.35' r='0.7'><stop offset='0' stop-color='#C9A227' stop-opacity='0.22'/><stop offset='1' stop-color='#C9A227' stop-opacity='0'/></radialGradient>
+</defs>
+<rect width='1200' height='800' fill='url(#bg)'/>
+<rect width='1200' height='800' fill='url(#glow)'/>
+<g stroke='#C9A227' stroke-opacity='0.5' fill='none' stroke-width='2'>
+<path d='M600 190 L640 250 L600 310 L560 250 Z'/>
+<path d='M420 250 Q600 130 780 250' stroke-opacity='0.35'/>
+<rect x='80' y='80' width='1040' height='640' rx='2' stroke-opacity='0.25'/>
+<rect x='96' y='96' width='1008' height='608' rx='2' stroke-opacity='0.15'/>
+</g>
+<text x='600' y='430' text-anchor='middle' font-family='Georgia, serif' font-size='64' fill='#F5F0E6' letter-spacing='6'>ROYAL SUITE</text>
+<text x='600' y='486' text-anchor='middle' font-family='Georgia, serif' font-size='22' fill='#C9A227' letter-spacing='10'>JAYA MAHAL PALACE</text>
+</svg>

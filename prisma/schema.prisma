@@ -1,0 +1,72 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Room {
+  id              String    @id @default(cuid())
+  slug            String    @unique
+  name            String
+  tagline         String    @default("")
+  description     String
+  priceInr        Int
+  maxGuests       Int       @default(2)
+  sizeSqft        Int       @default(400)
+  totalUnits      Int       @default(1)
+  amenities       String    @default("[]")
+  imageUrl        String    @default("")
+  featured        Boolean   @default(false)
+  active          Boolean   @default(true)
+  sortOrder       Int       @default(0)
+  bookings        Booking[]
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model Booking {
+  id         String   @id @default(cuid())
+  bookingRef String   @unique
+  roomId     String
+  room       Room     @relation(fields: [roomId], references: [id])
+  guestName  String
+  email      String
+  phone      String
+  checkIn    DateTime
+  checkOut   DateTime
+  guests     Int      @default(2)
+  units      Int      @default(1)
+  amountInr  Int
+  status     String   @default("PENDING") // PENDING | CONFIRMED | CANCELLED | CHECKED_IN | CHECKED_OUT
+  source     String   @default("WEBSITE") // WEBSITE | ADMIN | PAYMENT_LINK
+  notes      String   @default("")
+  payment    Payment?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Payment {
+  id                String   @id @default(cuid())
+  bookingId         String   @unique
+  booking           Booking  @relation(fields: [bookingId], references: [id])
+  razorpayOrderId   String?  @unique
+  razorpayPaymentId String?
+  razorpayLinkId    String?
+  linkUrl           String?
+  amountInr         Int
+  status            String   @default("CREATED") // CREATED | PAID | FAILED | REFUNDED
+  method            String   @default("CHECKOUT") // CHECKOUT | LINK | DEMO
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+model Admin {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  passwordHash String
+  createdAt    DateTime @default(now())
+}
