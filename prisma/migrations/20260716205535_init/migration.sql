@@ -1,6 +1,6 @@
 -- CreateTable
 CREATE TABLE "Room" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    "id" TEXT NOT NULL,
     "slug" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "tagline" TEXT NOT NULL DEFAULT '',
@@ -14,34 +14,37 @@ CREATE TABLE "Room" (
     "featured" BOOLEAN NOT NULL DEFAULT false,
     "active" BOOLEAN NOT NULL DEFAULT true,
     "sortOrder" INTEGER NOT NULL DEFAULT 0,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" DATETIME NOT NULL
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Room_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "Booking" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    "id" TEXT NOT NULL,
     "bookingRef" TEXT NOT NULL,
     "roomId" TEXT NOT NULL,
     "guestName" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "phone" TEXT NOT NULL,
-    "checkIn" DATETIME NOT NULL,
-    "checkOut" DATETIME NOT NULL,
+    "checkIn" TIMESTAMP(3) NOT NULL,
+    "checkOut" TIMESTAMP(3) NOT NULL,
     "guests" INTEGER NOT NULL DEFAULT 2,
     "units" INTEGER NOT NULL DEFAULT 1,
     "amountInr" INTEGER NOT NULL,
     "status" TEXT NOT NULL DEFAULT 'PENDING',
     "source" TEXT NOT NULL DEFAULT 'WEBSITE',
     "notes" TEXT NOT NULL DEFAULT '',
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" DATETIME NOT NULL,
-    CONSTRAINT "Booking_roomId_fkey" FOREIGN KEY ("roomId") REFERENCES "Room" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Booking_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "Payment" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    "id" TEXT NOT NULL,
     "bookingId" TEXT NOT NULL,
     "razorpayOrderId" TEXT,
     "razorpayPaymentId" TEXT,
@@ -50,18 +53,21 @@ CREATE TABLE "Payment" (
     "amountInr" INTEGER NOT NULL,
     "status" TEXT NOT NULL DEFAULT 'CREATED',
     "method" TEXT NOT NULL DEFAULT 'CHECKOUT',
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" DATETIME NOT NULL,
-    CONSTRAINT "Payment_bookingId_fkey" FOREIGN KEY ("bookingId") REFERENCES "Booking" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Payment_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "Admin" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    "id" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "passwordHash" TEXT NOT NULL,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT "Admin_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex
@@ -78,3 +84,9 @@ CREATE UNIQUE INDEX "Payment_razorpayOrderId_key" ON "Payment"("razorpayOrderId"
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Admin_email_key" ON "Admin"("email");
+
+-- AddForeignKey
+ALTER TABLE "Booking" ADD CONSTRAINT "Booking_roomId_fkey" FOREIGN KEY ("roomId") REFERENCES "Room"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Payment" ADD CONSTRAINT "Payment_bookingId_fkey" FOREIGN KEY ("bookingId") REFERENCES "Booking"("id") ON DELETE RESTRICT ON UPDATE CASCADE;

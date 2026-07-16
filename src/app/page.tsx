@@ -4,6 +4,7 @@ import ScrollExpandHero from "@/components/ScrollExpandHero";
 import RoomsLive from "@/components/RoomsLive";
 import Reveal from "@/components/Reveal";
 import TiltCard from "@/components/TiltCard";
+import Amenities from "@/components/Amenities";
 import Link from "next/link";
 
 const venues = [
@@ -132,6 +133,9 @@ export default function Home() {
               </div>
             </div>
           </section>
+
+          {/* ── Amenities ────────────────────────────────── */}
+          <Amenities />
 
           {/* ── Gallery ──────────────────────────────────── */}
           <section id="gallery" className="mx-auto max-w-6xl px-5 py-24">
