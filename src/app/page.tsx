@@ -16,12 +16,12 @@ const venues = [
 ];
 
 const gallery = [
-  "/media/gallery/g0.5.jpg",
-  "/media/gallery/g2.jpg",
-  "/media/gallery/g3.5.jpg",
-  "/media/gallery/g5.jpg",
-  "/media/gallery/g6.5.jpg",
-  "/media/gallery/g8.5.jpg",
+  "/media/gallery/p1.jpg",
+  "/media/gallery/p2.jpg",
+  "/media/gallery/p3.jpg",
+  "/media/gallery/p4.jpg",
+  "/media/gallery/p5.jpg",
+  "/media/gallery/p6.jpg",
 ];
 
 export default function Home() {
