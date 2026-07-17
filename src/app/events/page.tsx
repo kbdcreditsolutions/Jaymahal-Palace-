@@ -18,7 +18,7 @@ const venues = [
     size: "44,000 sq.ft",
     capacity: "Up to 2,500 guests",
     desc: "A vast, versatile space combining a manicured lawn with a large covered area, perfect for large-scale corporate conferences, trade shows, and elaborate receptions.",
-    img: "/media/gallery/Image-29-06-26-at-12.33-PM.png",
+    img: "/media/gallery/Convention-Centre-Jayamahal.jpg",
   },
   {
     id: "golden-lawn",

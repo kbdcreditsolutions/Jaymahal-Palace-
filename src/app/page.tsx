@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const venues = [
   { name: "Front Lawn", size: "44,000 sq.ft", note: "Grand weddings under the open sky", img: "/media/gallery/Front-Lawn-Jayamahal-Palace.jpeg" },
-  { name: "Convention Centre & Lawn", size: "44,000 sq.ft", note: "Conferences at royal scale", img: "/media/gallery/Image-29-06-26-at-12.33-PM.png" },
+  { name: "Convention Centre & Lawn", size: "44,000 sq.ft", note: "Conferences at royal scale", img: "/media/gallery/Convention-Centre-Jayamahal.jpg" },
   { name: "Golden Lawn & Restaurant", size: "12,000 sq.ft", note: "Receptions with a golden hour", img: "/media/gallery/Golden-Lawn-Jayamahal.jpeg" },
   { name: "Darbar Hall", size: "2,500 sq.ft", note: "Air-conditioned heritage hall", img: "/media/gallery/darbar-hall-JMP.jpg" },
   { name: "Pool Side Lawn", size: "26,000 sq.ft", note: "Evenings by the Olympic pool", img: "/media/gallery/Pool-Side-Lawn-JMP.jpeg" },
