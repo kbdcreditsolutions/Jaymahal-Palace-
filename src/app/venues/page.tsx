@@ -1,6 +1,6 @@
 import Reveal from "@/components/Reveal";
 import Image from "next/image";
-import { MapPin, Phone, Mail, Instagram } from "lucide-react";
+import { MapPin, Phone, Mail, AtSign } from "lucide-react";
 
 export default function VenuesPage() {
   return (
@@ -189,7 +189,7 @@ export default function VenuesPage() {
                 </div>
                 
                 <div className="flex items-center gap-4">
-                  <Instagram className="w-5 h-5 text-[var(--jm-gold)] shrink-0" />
+                  <AtSign className="w-5 h-5 text-[var(--jm-gold)] shrink-0" />
                   <p className="text-[var(--jm-primary)] text-sm">
                     @jayamahalpalacehotelbangalore
                   </p>
