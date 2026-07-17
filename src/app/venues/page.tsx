@@ -1,6 +1,7 @@
 import Reveal from "@/components/Reveal";
 import Image from "next/image";
 import { MapPin, Phone, Mail, AtSign } from "lucide-react";
+import Testimonials from "@/components/Testimonials";
 
 export default function VenuesPage() {
   return (
@@ -141,6 +142,9 @@ export default function VenuesPage() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials */}
+      <Testimonials />
 
       {/* Getting Here Map Section */}
       <section className="py-24 bg-[var(--jm-surface)] border-t border-[var(--jm-border)]">
