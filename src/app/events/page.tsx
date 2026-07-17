@@ -34,7 +34,7 @@ const venues = [
     size: "26,000 sq.ft",
     capacity: "Up to 1,500 guests",
     desc: "Host unforgettable evenings by the Olympic-sized pool. This picturesque venue brings a refreshing ambiance to parties and pre-wedding celebrations.",
-    img: "/media/gallery/g5.jpg",
+    img: "/media/gallery/poolside.jpg",
   },
   {
     id: "darbar-hall",

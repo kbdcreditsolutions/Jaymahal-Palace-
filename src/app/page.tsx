@@ -5,14 +5,15 @@ import RoomsLive from "@/components/RoomsLive";
 import Reveal from "@/components/Reveal";
 import TiltCard from "@/components/TiltCard";
 import Amenities from "@/components/Amenities";
+import Testimonials from "@/components/Testimonials";
 import Link from "next/link";
 
 const venues = [
-  { name: "Front Lawn", size: "44,000 sq.ft", note: "Grand weddings under the open sky" },
-  { name: "Convention Centre & Lawn", size: "44,000 sq.ft", note: "Conferences at royal scale" },
-  { name: "Golden Lawn & Restaurant", size: "12,000 sq.ft", note: "Receptions with a golden hour" },
-  { name: "Darbar Hall", size: "2,500 sq.ft", note: "Air-conditioned heritage hall" },
-  { name: "Pool Side Lawn", size: "26,000 sq.ft", note: "Evenings by the Olympic pool" },
+  { name: "Front Lawn", size: "44,000 sq.ft", note: "Grand weddings under the open sky", img: "/media/palace-aerial.jpg" },
+  { name: "Convention Centre & Lawn", size: "44,000 sq.ft", note: "Conferences at royal scale", img: "/media/gallery/g6.5.jpg" },
+  { name: "Golden Lawn & Restaurant", size: "12,000 sq.ft", note: "Receptions with a golden hour", img: "/media/gallery/g2.jpg" },
+  { name: "Darbar Hall", size: "2,500 sq.ft", note: "Air-conditioned heritage hall", img: "/media/gallery/g8.5.jpg" },
+  { name: "Pool Side Lawn", size: "26,000 sq.ft", note: "Evenings by the Olympic pool", img: "/media/gallery/poolside.jpg" },
 ];
 
 const gallery = [
@@ -107,12 +108,16 @@ export default function Home() {
                 {venues.map((v, i) => (
                   <Reveal key={v.name} delay={i * 0.06}>
                     <TiltCard className="h-full">
-                      <div className="h-full rounded-xl border border-[var(--jm-border)] bg-[var(--jm-bg)] p-7">
-                        <p className="font-display text-xl font-semibold">{v.name}</p>
-                        <p className="mt-1 text-xs uppercase tracking-[0.22em] text-[var(--jm-gold)]">
-                          {v.size}
-                        </p>
-                        <p className="mt-3 text-sm text-[var(--jm-muted)]">{v.note}</p>
+                      <div className="flex h-full flex-col overflow-hidden rounded-xl border border-[var(--jm-border)] bg-[var(--jm-bg)]">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={v.img} alt={v.name} className="h-48 w-full object-cover" loading="lazy" />
+                        <div className="p-7">
+                          <p className="font-display text-xl font-semibold">{v.name}</p>
+                          <p className="mt-1 text-xs uppercase tracking-[0.22em] text-[var(--jm-gold)]">
+                            {v.size}
+                          </p>
+                          <p className="mt-3 text-sm text-[var(--jm-muted)]">{v.note}</p>
+                        </div>
                       </div>
                     </TiltCard>
                   </Reveal>
@@ -136,6 +141,9 @@ export default function Home() {
 
           {/* ── Amenities ────────────────────────────────── */}
           <Amenities />
+
+          {/* ── Testimonials ─────────────────────────────── */}
+          <Testimonials />
 
           {/* ── Gallery ──────────────────────────────────── */}
           <section id="gallery" className="mx-auto max-w-6xl px-5 py-24">
