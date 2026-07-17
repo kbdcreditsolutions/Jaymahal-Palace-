@@ -23,9 +23,7 @@ export default function VenuesPage() {
             <Reveal delay={0.1}>
               <div className="flex flex-col items-center">
                 <div className="aspect-[4/3] w-full bg-[var(--jm-border)] rounded-md mb-6 overflow-hidden relative">
-                  <div className="absolute inset-0 flex items-center justify-center text-[var(--jm-muted)]">
-                    <svg className="w-16 h-16 opacity-20" fill="currentColor" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-                  </div>
+                  <Image src="/media/gallery/wedding_ai.png" alt="Weddings & Receptions" fill className="object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
                 <h3 className="font-display text-2xl mb-2 text-[var(--jm-primary)]">Weddings & Receptions</h3>
                 <p className="text-[var(--jm-muted)] text-sm">Grand baraats, open-air pheras and receptions with full decor freedom.</p>
@@ -35,9 +33,7 @@ export default function VenuesPage() {
             <Reveal delay={0.2}>
               <div className="flex flex-col items-center">
                 <div className="aspect-[4/3] w-full bg-[var(--jm-border)] rounded-md mb-6 overflow-hidden relative">
-                  <div className="absolute inset-0 flex items-center justify-center text-[var(--jm-muted)]">
-                    <svg className="w-16 h-16 opacity-20" fill="currentColor" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-                  </div>
+                  <Image src="/media/gallery/corporate_ai.png" alt="Corporate Events" fill className="object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
                 <h3 className="font-display text-2xl mb-2 text-[var(--jm-primary)]">Corporate Events</h3>
                 <p className="text-[var(--jm-muted)] text-sm">Product launches, offsites and gala dinners with a heritage backdrop.</p>
@@ -47,9 +43,7 @@ export default function VenuesPage() {
             <Reveal delay={0.3}>
               <div className="flex flex-col items-center">
                 <div className="aspect-[4/3] w-full bg-[var(--jm-border)] rounded-md mb-6 overflow-hidden relative">
-                  <div className="absolute inset-0 flex items-center justify-center text-[var(--jm-muted)]">
-                    <svg className="w-16 h-16 opacity-20" fill="currentColor" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-                  </div>
+                  <Image src="/media/gallery/private_ai.png" alt="Private Celebrations" fill className="object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
                 <h3 className="font-display text-2xl mb-2 text-[var(--jm-primary)]">Private Celebrations</h3>
                 <p className="text-[var(--jm-muted)] text-sm">Milestone birthdays, anniversaries and family gatherings at scale.</p>
