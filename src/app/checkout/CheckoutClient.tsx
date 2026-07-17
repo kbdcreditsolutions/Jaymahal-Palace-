@@ -132,7 +132,7 @@ export default function CheckoutClient() {
 
       <div className="grid gap-8 lg:grid-cols-[1fr_380px]">
         <div className="space-y-8">
-          <section className="glass rounded-xl p-6">
+          <section className="glass relative z-20 rounded-xl p-6">
             <h2 className="font-display mb-5 text-xl font-semibold">1 · Your stay</h2>
             <StayPicker stay={stay} onChange={setStay} />
             <div className="mt-5">
