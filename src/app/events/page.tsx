@@ -10,7 +10,7 @@ const venues = [
     size: "44,000 sq.ft",
     capacity: "Up to 3,000 guests",
     desc: "A sprawling verdant expanse ideal for grand weddings, mega-events, and exhibitions under the open sky. Surrounded by heritage charm.",
-    img: "/media/palace-aerial.jpg",
+    img: "/media/gallery/Front-Lawn-Jayamahal-Palace.jpeg",
   },
   {
     id: "convention-centre",
@@ -18,7 +18,7 @@ const venues = [
     size: "44,000 sq.ft",
     capacity: "Up to 2,500 guests",
     desc: "A vast, versatile space combining a manicured lawn with a large covered area, perfect for large-scale corporate conferences, trade shows, and elaborate receptions.",
-    img: "/media/gallery/p4.jpg",
+    img: "/media/gallery/Image-29-06-26-at-12.33-PM.png",
   },
   {
     id: "golden-lawn",
@@ -26,7 +26,7 @@ const venues = [
     size: "12,000 sq.ft",
     capacity: "Up to 800 guests",
     desc: "An enchanting setting for medium-sized gatherings, evening cocktail parties, and elegant receptions bathed in a golden hour glow.",
-    img: "/media/gallery/g2.jpg",
+    img: "/media/gallery/Golden-Lawn-Jayamahal.jpeg",
   },
   {
     id: "pool-side-lawn",
@@ -34,7 +34,7 @@ const venues = [
     size: "26,000 sq.ft",
     capacity: "Up to 1,500 guests",
     desc: "Host unforgettable evenings by the Olympic-sized pool. This picturesque venue brings a refreshing ambiance to parties and pre-wedding celebrations.",
-    img: "/media/gallery/poolside.jpg",
+    img: "/media/gallery/Pool-Side-Lawn-JMP.jpeg",
   },
   {
     id: "darbar-hall",
@@ -42,7 +42,7 @@ const venues = [
     size: "2,500 sq.ft",
     capacity: "Up to 200 guests",
     desc: "An air-conditioned heritage hall exuding colonial elegance. The perfect indoor venue for intimate weddings, corporate seminars, and private banquets.",
-    img: "/media/gallery/g5.jpg",
+    img: "/media/gallery/darbar-hall-JMP.jpg",
   },
 ];
 
