@@ -2,10 +2,14 @@ import Reveal from "@/components/Reveal";
 import Image from "next/image";
 import { MapPin, Phone, Mail, AtSign } from "lucide-react";
 import Testimonials from "@/components/Testimonials";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 export default function VenuesPage() {
   return (
-    <main className="min-h-screen bg-[var(--jm-bg)] pt-24 pb-0">
+    <>
+      <Nav />
+      <main className="min-h-screen bg-[var(--jm-bg)] pt-24 pb-0">
       {/* Perfect For Section */}
       <section className="py-16">
         <div className="mx-auto max-w-6xl px-5 text-center">
@@ -204,5 +208,7 @@ export default function VenuesPage() {
         </div>
       </section>
     </main>
+    <Footer />
+    </>
   );
 }
