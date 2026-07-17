@@ -90,6 +90,11 @@ body {
 }
 
 /* React Datepicker Customizations */
+.react-datepicker-wrapper {
+  display: block !important;
+  width: 100% !important;
+}
+
 .react-datepicker-popper {
   z-index: 50 !important;
 }
