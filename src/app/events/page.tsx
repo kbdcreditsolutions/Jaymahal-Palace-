@@ -10,7 +10,7 @@ const venues = [
     size: "44,000 sq.ft",
     capacity: "Up to 3,000 guests",
     desc: "A sprawling verdant expanse ideal for grand weddings, mega-events, and exhibitions under the open sky. Surrounded by heritage charm.",
-    img: "https://jayamahalpalace.com/wp-content/uploads/2026/05/imgi_33_3-2-1.jpg",
+    img: "/media/palace-aerial.jpg",
   },
   {
     id: "convention-centre",
@@ -18,7 +18,7 @@ const venues = [
     size: "44,000 sq.ft",
     capacity: "Up to 2,500 guests",
     desc: "A vast, versatile space combining a manicured lawn with a large covered area, perfect for large-scale corporate conferences, trade shows, and elaborate receptions.",
-    img: "https://jayamahalpalace.com/wp-content/uploads/2026/05/imgi_34_4-3.jpg",
+    img: "/media/gallery/p4.jpg",
   },
   {
     id: "golden-lawn",
@@ -26,7 +26,7 @@ const venues = [
     size: "12,000 sq.ft",
     capacity: "Up to 800 guests",
     desc: "An enchanting setting for medium-sized gatherings, evening cocktail parties, and elegant receptions bathed in a golden hour glow.",
-    img: "https://jayamahalpalace.com/wp-content/uploads/2026/05/imgi_35_2-2-1.jpg",
+    img: "/media/gallery/g2.jpg",
   },
   {
     id: "pool-side-lawn",
@@ -34,7 +34,7 @@ const venues = [
     size: "26,000 sq.ft",
     capacity: "Up to 1,500 guests",
     desc: "Host unforgettable evenings by the Olympic-sized pool. This picturesque venue brings a refreshing ambiance to parties and pre-wedding celebrations.",
-    img: "https://jayamahalpalace.com/wp-content/uploads/2026/05/imgi_36_1-2-2.jpg",
+    img: "/media/gallery/poolside.jpg",
   },
   {
     id: "darbar-hall",
@@ -42,7 +42,7 @@ const venues = [
     size: "2,500 sq.ft",
     capacity: "Up to 200 guests",
     desc: "An air-conditioned heritage hall exuding colonial elegance. The perfect indoor venue for intimate weddings, corporate seminars, and private banquets.",
-    img: "https://jayamahalpalace.com/wp-content/uploads/2026/05/imgi_37_5-3.jpg",
+    img: "/media/gallery/g5.jpg",
   },
 ];
 

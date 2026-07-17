@@ -10,9 +10,9 @@ import Link from "next/link";
 
 const venues = [
   { name: "Front Lawn", size: "44,000 sq.ft", note: "Grand weddings under the open sky", img: "/media/palace-aerial.jpg" },
-  { name: "Convention Centre & Lawn", size: "44,000 sq.ft", note: "Conferences at royal scale", img: "/media/gallery/g6.5.jpg" },
+  { name: "Convention Centre & Lawn", size: "44,000 sq.ft", note: "Conferences at royal scale", img: "/media/gallery/p4.jpg" },
   { name: "Golden Lawn & Restaurant", size: "12,000 sq.ft", note: "Receptions with a golden hour", img: "/media/gallery/g2.jpg" },
-  { name: "Darbar Hall", size: "2,500 sq.ft", note: "Air-conditioned heritage hall", img: "/media/gallery/g8.5.jpg" },
+  { name: "Darbar Hall", size: "2,500 sq.ft", note: "Air-conditioned heritage hall", img: "/media/gallery/g5.jpg" },
   { name: "Pool Side Lawn", size: "26,000 sq.ft", note: "Evenings by the Olympic pool", img: "/media/gallery/poolside.jpg" },
 ];
 
