@@ -20,6 +20,7 @@ model Room {
   totalUnits      Int       @default(1)
   amenities       String    @default("[]")
   imageUrl        String    @default("")
+  images          String[]  @default([])
   featured        Boolean   @default(false)
   active          Boolean   @default(true)
   sortOrder       Int       @default(0)

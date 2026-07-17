@@ -44,6 +44,7 @@ export async function GET(req: NextRequest) {
         totalUnits: room.totalUnits,
         amenities: safeAmenities(room.amenities),
         imageUrl: room.imageUrl,
+        images: room.images,
         featured: room.featured,
         available,
       };

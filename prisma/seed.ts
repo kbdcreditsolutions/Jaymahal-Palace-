@@ -16,6 +16,7 @@ const rooms = [
     totalUnits: 10,
     amenities: JSON.stringify(["King bed", "Garden view", "24/7 room service", "High-speed WiFi", "Rain shower", "Smart TV"]),
     imageUrl: "https://jayamahalpalace.com/wp-content/uploads/2026/05/imgi_17_8.jpg",
+    images: ["https://jayamahalpalace.com/wp-content/uploads/2026/05/imgi_17_8.jpg", "https://jayamahalpalace.com/wp-content/uploads/2026/05/imgi_19_10.jpg", "https://jayamahalpalace.com/wp-content/uploads/2026/05/imgi_21_6-1.jpg"],
     featured: false,
     sortOrder: 1,
   },
@@ -31,6 +32,7 @@ const rooms = [
     totalUnits: 8,
     amenities: JSON.stringify(["King bed", "Private balcony", "Lawn view", "Minibar", "Marble bath", "Work desk", "24/7 room service"]),
     imageUrl: "https://jayamahalpalace.com/wp-content/uploads/2026/05/imgi_20_7.jpg",
+    images: ["https://jayamahalpalace.com/wp-content/uploads/2026/05/imgi_20_7.jpg", "https://jayamahalpalace.com/wp-content/uploads/2026/05/imgi_22_5-1.jpg", "https://jayamahalpalace.com/wp-content/uploads/2026/05/imgi_23_4-1.jpg"],
     featured: true,
     sortOrder: 2,
   },
@@ -46,6 +48,7 @@ const rooms = [
     totalUnits: 4,
     amenities: JSON.stringify(["Separate living room", "Butler service", "Club lounge access", "Soaking tub", "Estate view", "Private dining", "Walk-in wardrobe"]),
     imageUrl: "https://jayamahalpalace.com/wp-content/uploads/2026/05/imgi_25_2-1.jpg",
+    images: ["https://jayamahalpalace.com/wp-content/uploads/2026/05/imgi_25_2-1.jpg", "https://jayamahalpalace.com/wp-content/uploads/2026/05/imgi_26_3-1.jpg", "https://jayamahalpalace.com/wp-content/uploads/2026/05/imgi_27_6-2.jpg"],
     featured: true,
     sortOrder: 3,
   },
@@ -61,6 +64,7 @@ const rooms = [
     totalUnits: 2,
     amenities: JSON.stringify(["Tower terrace", "Butler service", "Private dining", "Heritage interiors", "Airport transfers", "Club lounge access", "Jacuzzi"]),
     imageUrl: "https://jayamahalpalace.com/wp-content/uploads/2026/05/imgi_29_1-3.jpg",
+    images: ["https://jayamahalpalace.com/wp-content/uploads/2026/05/imgi_29_1-3.jpg", "https://jayamahalpalace.com/wp-content/uploads/2026/05/imgi_30_3-2.jpg", "https://jayamahalpalace.com/wp-content/uploads/2026/05/imgi_32_2.jpg"],
     featured: true,
     sortOrder: 4,
   },
@@ -68,7 +72,7 @@ const rooms = [
 
 async function main() {
   for (const r of rooms) {
-    await prisma.room.upsert({ where: { slug: r.slug }, update: {}, create: r });
+    await prisma.room.upsert({ where: { slug: r.slug }, update: r, create: r });
   }
   const email = process.env.ADMIN_EMAIL || "admin@jayamahalpalace.com";
   const password = process.env.ADMIN_PASSWORD || "JayaMahal@2026";

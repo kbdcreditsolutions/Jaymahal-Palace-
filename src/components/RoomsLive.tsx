@@ -7,6 +7,7 @@ import { Users, Maximize, BadgeCheck, Ban } from "lucide-react";
 import TiltCard from "./TiltCard";
 import Reveal from "./Reveal";
 import StayPicker, { Stay, todayISO } from "./StayPicker";
+import RoomCarousel from "./RoomCarousel";
 
 export type RoomWithAvailability = {
   id: string;
@@ -20,6 +21,7 @@ export type RoomWithAvailability = {
   totalUnits: number;
   amenities: string[];
   imageUrl: string;
+  images: string[];
   featured: boolean;
   available: number | null;
 };
@@ -65,13 +67,11 @@ export default function RoomsLive({ limit }: { limit?: number }) {
               <TiltCard className="group h-full">
                 <div className="flex h-full flex-col overflow-hidden rounded-xl border border-[var(--jm-border)] bg-[var(--jm-surface)]">
                   <div className="relative overflow-hidden">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={room.imageUrl}
-                      alt={room.name}
-                      className="aspect-[3/2] w-full object-cover transition duration-700 group-hover:scale-105"
+                    <RoomCarousel 
+                      images={room.images?.length > 0 ? room.images : [room.imageUrl]} 
+                      name={room.name} 
                     />
-                    <div className="absolute left-4 top-4 flex gap-2">
+                    <div className="absolute left-4 top-4 flex gap-2 pointer-events-none">
                       {room.featured && (
                         <span className="rounded-full bg-[var(--jm-gold)] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-black">
                           Signature
