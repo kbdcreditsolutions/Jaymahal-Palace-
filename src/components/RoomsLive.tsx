@@ -46,7 +46,7 @@ export default function RoomsLive({ limit }: { limit?: number }) {
 
   return (
     <div>
-      <div className="glass mx-auto mb-12 max-w-3xl rounded-xl p-5">
+      <div className="glass relative z-20 mx-auto mb-12 max-w-3xl rounded-xl p-5">
         <StayPicker stay={stay} onChange={setStay} compact />
         <p className="mt-3 text-center text-xs text-[var(--jm-muted)]">
           Live availability — updates in real time as rooms are booked.
